@@ -20,30 +20,36 @@
                     <component :is="currentForm" @setting-form="updateForm" @update="updateInfo" :form-data="computedForm"></component>
                 </keep-alive>
             </div>
-                <div>
+                <div class="row g-3">
                     <script type="text/x-template" id="form1">
-                            <label>Name：</label>
-                            <input v-model="name"> <br/>
-                            <label>Phone：</label>
-                            <input v-model="phone"> <br/>
-                            <input type="button" value="NEXT" @click="nextSteps">
+                        <div class="col">
+                            <label for="formGroupExampleInput" class="form-label">Name：</label>
+                            <input type="text" class="form-control"  v-model="name"> 
+                        </div>    
+                            <br/>
+                        <div class="col">
+                            <label for="formGroupExampleInput2" class="form-label">Phone：</label>
+                            <input type="text" class="form-control"  v-model="phone">
+                        </div>    
+                            <br/>
+                            <input type="button"  class="btn btn-outline-secondary" type="button" value="NEXT" @click="nextSteps">
                     </script>
                 </div>
-                <div>
+                <div class="mb-3">
                     <script type="text/x-template" id="form2">
-                        <label>地址</label>
-                        <input v-model="address"> <br/>
-                        <input type="button" value="BACK" @click="preSteps">
-                        <input type="button" value="NEXT" @click="nextSteps">
+                        <label class="form-label">Address：</label>
+                        <input class="form-control" v-model="address"> <br/>
+                        <input class="btn btn-outline-secondary" type="button" value="BACK" @click="preSteps">
+                        <input class="btn btn-outline-secondary" type="button" value="NEXT" @click="nextSteps">
                     </script>
                 </div>
-                <div>
+                <div class="mb-3">
                     <script type="text/x-template" id="form3">
-                        <label>您的資料</label>
+                        <label class="form-label">您的資料</label>
                         <div>{{ formData.name }}</div>
                         <div>{{ formData.phone }}</div>
                         <div>{{ formData.address }}</div>
-                        <input type="button" value="BACK" @click="preSteps">
+                        <input class="btn btn-outline-secondary" type="button" value="BACK" @click="preSteps">
                     </script>
                 </div>
         </div>
