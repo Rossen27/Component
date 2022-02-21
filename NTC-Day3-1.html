@@ -22,19 +22,19 @@
             </div>
                 <div>
                     <script type="text/x-template" id="form1">
-                        <label>Name：</label>
-                        <input v-model="name"> <br/>
-                        <label>Phone：</label>
-                        <input v-model="phone"> <br/>
-                        <input type="button" value="下一步" @click="nextSteps">
+                            <label>Name：</label>
+                            <input v-model="name"> <br/>
+                            <label>Phone：</label>
+                            <input v-model="phone"> <br/>
+                            <input type="button" value="NEXT" @click="nextSteps">
                     </script>
                 </div>
                 <div>
                     <script type="text/x-template" id="form2">
                         <label>地址</label>
                         <input v-model="address"> <br/>
-                        <input type="button" value="上一步" @click="preSteps">
-                        <input type="button" value="下一步" @click="nextSteps">
+                        <input type="button" value="BACK" @click="preSteps">
+                        <input type="button" value="NEXT" @click="nextSteps">
                     </script>
                 </div>
                 <div>
@@ -43,7 +43,7 @@
                         <div>{{ formData.name }}</div>
                         <div>{{ formData.phone }}</div>
                         <div>{{ formData.address }}</div>
-                        <input type="button" value="上一步" @click="preSteps">
+                        <input type="button" value="BACK" @click="preSteps">
                     </script>
                 </div>
         </div>
